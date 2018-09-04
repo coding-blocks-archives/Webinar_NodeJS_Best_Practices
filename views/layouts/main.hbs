@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <a href="/articles">Articles</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Signup</a>
+    </nav>
+    {{#if username}}
+        <b>Hello, {{username}}!!</b>
+    {{/if}}
     {{{body}}}
 </body>
 </html>

@@ -16,7 +16,9 @@ app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, '../views'))
 
 app.use(session({
-  secret: 'some super secret string'
+  secret: 'some super secret string',
+  resave: false,
+  saveUninitialized: false
 }))
 
 app.use(passport.initialize())

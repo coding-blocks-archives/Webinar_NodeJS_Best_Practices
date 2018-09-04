@@ -23,7 +23,7 @@ async function fetchArticles () {
   try {
     return await Article.findAll({
       include: [
-        { model: User, attributes: ['username'] }
+        { model: User, as: 'author', attributes: ['username'] }
       ]
     })
   } catch (e) {

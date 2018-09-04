@@ -1,0 +1,9 @@
+{{#each articles as |article|}}
+    <section>
+        <h1>{{article.title}}</h1>
+        <small> - by {{article.author.username}}</small>
+        <div>
+            {{article.content}}
+        </div>
+    </section>
+{{/each}}}}

@@ -20,7 +20,7 @@ const Article = db.define('article', {
     allowNull: true
   },
   content: {
-    type: DT.STRING
+    type: DT.TEXT
   }
 })
 
@@ -30,12 +30,12 @@ const Comment = db.define('comment', {
     allowNull: true
   },
   message: {
-    type: DT.STRING
+    type: DT.TEXT
   }
 })
 
 Article.belongsTo(User, { as: 'author' })
-User.hasMany(Article, { as: 'author' })
+User.hasMany(Article, { foreignKey: 'authorId' })
 
 Comment.belongsTo(Article)
 Article.hasMany(Comment)

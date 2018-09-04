@@ -4,7 +4,9 @@
   "description": "A project that showcases best practices for organising a nodejs project",
   "main": "src/run.js",
   "scripts": {
-    "start": "node src/run.js"
+    "start": "node src/run.js",
+    "start:resetdb": "FORCE_DB_RESET=true node src/run.js",
+    "seeddata": "node scripts/seed_sampledata.js"
   },
   "author": "",
   "license": "ISC",

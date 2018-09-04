@@ -7,7 +7,8 @@ app.use('/', express.static(path.join(__dirname, '../public')))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => res.send('Hello World'))
+app.use('/', require('./routes/pages'))
+app.use('/api', require('./routes/api'))
 
 module.exports = {
   app

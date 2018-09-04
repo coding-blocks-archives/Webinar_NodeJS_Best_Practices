@@ -9,6 +9,8 @@ app.engine('hbs', hbs.express4({
   layoutsDir: path.join(__dirname, '../views/layouts'),
   defaultLayout: path.join(__dirname, '../views/layouts/main.hbs')
 }))
+app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, '../views'))
 
 app.use('/', express.static(path.join(__dirname, '../public')))
 app.use(express.json())

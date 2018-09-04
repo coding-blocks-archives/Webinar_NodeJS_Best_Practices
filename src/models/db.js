@@ -5,7 +5,8 @@ const db = new Sequelize(
   'sampleblogdb', 'samplebloguser', 'sampleblogpass',
   {
     dialect: 'mysql',
-    host: 'localhost'
+    host: 'localhost',
+    logging: false
   }
 )
 

@@ -1,6 +1,6 @@
 # Best Practices for a NodeJS Project
 
-# Database Setup
+## Database Setup
 
 ```mysql
 create database sampleblogdb;
@@ -9,17 +9,17 @@ grant all privileges on sampleblogdb.* to samplebloguser;
 flush privileges;
 ```
 
-# TODOS
+## TODOS
 
-## Security
+### Security
 
 1. Hash the passwords, do not save as string
 2. Use an access control layer to control who can create/edit articles and comments
 
-## Application
+### Application
 
 1. Create/edit/delete articles and comments
 
-## UI
+### UI
 
 1. Implement a CSS framework (like Bootstrap) here

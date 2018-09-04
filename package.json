@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/run.js",
     "start:resetdb": "FORCE_DB_RESET=true node src/run.js",
-    "seeddata": "node scripts/seed_sampledata.js"
+    "seeddata": "DEBUG=* node scripts/seed_sampledata.js"
   },
   "author": "",
   "license": "ISC",

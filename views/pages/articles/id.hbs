@@ -1,0 +1,17 @@
+<section>
+    <h1>{{article.title}}</h1>
+    <small> - by {{article.author.username}}</small>
+    <div>
+        {{article.content}}
+    </div>
+</section>
+<section>
+    <h1>Comments</h1>
+    {{#each article.comments as |comment|}}
+        <div>
+            <h3>{{comment.title}}</h3>
+            <div>- by <small>{{comment.user.username}}</small></div>
+            <p>{{comment.message}}</p>
+        </div>
+    {{/each}}
+</section>

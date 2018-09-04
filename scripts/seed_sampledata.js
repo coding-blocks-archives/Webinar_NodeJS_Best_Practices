@@ -30,6 +30,44 @@ async function seed () {
         authorId: 2
       }
     ])
+    await models.Comment.bulkCreate([
+      {
+        title: 'nice article',
+        message: 'really nice written article, thanks!',
+        userId: 1,
+        articleId: 1
+      },
+      {
+        title: 'good article',
+        message: `o take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses `,
+        userId: 1,
+        articleId: 1
+      },
+      {
+        title: 'could be better',
+        message: `, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh`,
+        userId: 1,
+        articleId: 2
+      },
+      {
+        title: 'thanks for writing this',
+        message: `hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain `,
+        userId: 2,
+        articleId: 3
+      },
+      {
+        title: 'did not like your article',
+        message: `pedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis volupt`,
+        userId: 1,
+        articleId: 3
+      },
+      {
+        title: 'really bad article',
+        message: `ure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and `,
+        userId: 2,
+        articleId: 4
+      }
+    ])
   } catch (e) {
     throw e
   }
